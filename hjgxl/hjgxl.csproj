@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{44228CF7-CE47-48B3-86A8-444B515D3435}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>hjgxl</RootNamespace>
+    <AssemblyName>hjgxl</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '64|AnyCPU'">
+    <OutputPath>bin\64\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '64|x86'">
+    <OutputPath>bin\x86\64\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '64|x64'">
+    <OutputPath>bin\x64\64\</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '86|AnyCPU'">
+    <OutputPath>bin\86\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '86|x86'">
+    <OutputPath>bin\x86\86\</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '86|x64'">
+    <OutputPath>bin\x64\86\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="barcode128">
+      <HintPath>..\..\..\..\sun_code\程序\sun\barcode128\barcode128\bin\Debug\barcode128.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Encrypt">
+      <HintPath>..\..\..\..\sun_code\程序\sun\Encrypt\Encrypt\bin\Debug\Encrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.WinForms">
+      <HintPath>..\..\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FDb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDb.Designer.cs">
+      <DependentUpon>FDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FFh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FFh.Designer.cs">
+      <DependentUpon>FFh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FFq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FFq.Designer.cs">
+      <DependentUpon>FFq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FHj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FHj.Designer.cs">
+      <DependentUpon>FHj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fjp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fjp.Designer.cs">
+      <DependentUpon>Fjp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPt.cs" />
+    <Compile Include="Frksj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frksj.Designer.cs">
+      <DependentUpon>Frksj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Crole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Crole.Designer.cs">
+      <DependentUpon>Frm_Crole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Dl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Dl.Designer.cs">
+      <DependentUpon>Frm_Dl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Epwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Epwd.Designer.cs">
+      <DependentUpon>Frm_Epwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Euser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Euser.Designer.cs">
+      <DependentUpon>Frm_Euser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Iuser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Iuser.Designer.cs">
+      <DependentUpon>Frm_Iuser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ModuleAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ModuleAdd.Designer.cs">
+      <DependentUpon>Frm_ModuleAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_RoleAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_RoleAdd.Designer.cs">
+      <DependentUpon>Frm_RoleAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_UserAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_UserAdd.Designer.cs">
+      <DependentUpon>Frm_UserAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Yhgl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Yhgl.Designer.cs">
+      <DependentUpon>FRM_Yhgl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frpt.Designer.cs">
+      <DependentUpon>Frpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRwcx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRwcx.Designer.cs">
+      <DependentUpon>FRwcx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSh.Designer.cs">
+      <DependentUpon>FSh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ftb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ftb.Designer.cs">
+      <DependentUpon>Ftb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTmbd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTmbd.Designer.cs">
+      <DependentUpon>FTmbd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ftmzs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ftmzs.Designer.cs">
+      <DependentUpon>Ftmzs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fuser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fuser.Designer.cs">
+      <DependentUpon>Fuser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FXggx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FXggx.Designer.cs">
+      <DependentUpon>FXggx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fxtsz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fxtsz.Designer.cs">
+      <DependentUpon>Fxtsz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FYltm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FYltm.Designer.cs">
+      <DependentUpon>FYltm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FYltmdy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FYltmdy.Designer.cs">
+      <DependentUpon>FYltmdy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FZd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FZd.Designer.cs">
+      <DependentUpon>FZd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Globals.cs" />
+    <Compile Include="jp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="jp.Designer.cs">
+      <DependentUpon>jp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListViewSorter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RK.Designer.cs">
+      <DependentUpon>RK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="R_T.cs" />
+    <Compile Include="SysLog.cs" />
+    <Compile Include="tj.cs" />
+    <Compile Include="ys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ys.Designer.cs">
+      <DependentUpon>ys.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDb.resx">
+      <DependentUpon>FDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFh.resx">
+      <DependentUpon>FFh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FFq.resx">
+      <DependentUpon>FFq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FHj.resx">
+      <DependentUpon>FHj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fjp.resx">
+      <DependentUpon>Fjp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frksj.resx">
+      <DependentUpon>Frksj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Crole.resx">
+      <DependentUpon>Frm_Crole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Dl.resx">
+      <DependentUpon>Frm_Dl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Epwd.resx">
+      <DependentUpon>Frm_Epwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Euser.resx">
+      <DependentUpon>Frm_Euser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Iuser.resx">
+      <DependentUpon>Frm_Iuser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ModuleAdd.resx">
+      <DependentUpon>Frm_ModuleAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_RoleAdd.resx">
+      <DependentUpon>Frm_RoleAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_UserAdd.resx">
+      <DependentUpon>Frm_UserAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Yhgl.resx">
+      <DependentUpon>FRM_Yhgl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frpt.resx">
+      <DependentUpon>Frpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRwcx.resx">
+      <DependentUpon>FRwcx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSh.resx">
+      <DependentUpon>FSh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ftb.resx">
+      <DependentUpon>Ftb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTmbd.resx">
+      <DependentUpon>FTmbd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ftmzs.resx">
+      <DependentUpon>Ftmzs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fuser.resx">
+      <DependentUpon>Fuser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FXggx.resx">
+      <DependentUpon>FXggx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fxtsz.resx">
+      <DependentUpon>Fxtsz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FYltm.resx">
+      <DependentUpon>FYltm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FYltmdy.resx">
+      <DependentUpon>FYltmdy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FZd.resx">
+      <DependentUpon>FZd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jp.resx">
+      <DependentUpon>jp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RK.resx">
+      <DependentUpon>RK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ys.resx">
+      <DependentUpon>ys.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ARW02UP.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\54.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Application _ Sherlock.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toolbar _ Find.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
